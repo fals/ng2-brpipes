@@ -5,9 +5,10 @@ var CepPipe = (function () {
     function CepPipe() {
     }
     CepPipe.prototype.transform = function (value) {
-        if (value != null && value.length === 8) {
-            return value.substr(0, 5) + '-' + value.substring(5, 8);
+        if (value && value.length === 8) {
+            return value.substr(0, 5) + "-" + value.substr(5, 3);
         }
+        return value;
     };
     CepPipe.decorators = [
         { type: core_1.Pipe, args: [{
@@ -15,7 +16,7 @@ var CepPipe = (function () {
                 },] },
     ];
     /** @nocollapse */
-    CepPipe.ctorParameters = function () { return []; };
+    CepPipe.ctorParameters = [];
     return CepPipe;
 }());
 exports.CepPipe = CepPipe;
