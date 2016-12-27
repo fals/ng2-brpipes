@@ -1,3 +1,4 @@
+import { isString } from './utils';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,7 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 // 72006-226
 export class CepPipe implements PipeTransform {
-    transform(value: string): any {
+    transform(value: any): any {
+        if (!isString(value)) {
+            return value;
+        }
+
         if(value && value.length === 8) {
             return `${value.substr(0, 5)}-${value.substr(5, 3)}`;
         }

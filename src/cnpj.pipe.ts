@@ -1,3 +1,4 @@
+import { isString } from './utils';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,7 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 // 99.999.999/9999-99
 export class CnpjPipe implements PipeTransform {
-    transform(value: string): any {
+    transform(value: any): any {
+        if (!isString(value)) {
+            return value;
+        }
+
         if(value && value.length === 14) {
             return `${value.substr(0, 2)}.${value.substr(2, 3)}.${value.substr(5, 3)}/${value.substr(8, 4)}-${value.substr(12, 2)}`;
         }

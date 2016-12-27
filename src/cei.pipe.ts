@@ -1,3 +1,4 @@
+import { isString } from './utils';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,7 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 // 76.119.87629/85
 export class CeiPipe implements PipeTransform {
-    transform(value: string): any {
+    transform(value: any): any {
+        if (!isString(value)) {
+            return value;
+        }
+
         if (value && value.length === 12) {
             return `${value.substr(0, 2)}.${value.substr(2, 3)}.${value.substr(5, 5)}/${value.substr(10, 2)}`;
         }
