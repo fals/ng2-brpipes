@@ -1,13 +1,10 @@
-import { TelefonePipe } from '../src/telefone.pipe';
-describe('TelefonePipe', () => {
-  
-  let pipe = new TelefonePipe();
-  it('transforms "3196098689" to "(31)9609-8689"', () => {
-    expect(pipe.transform('3196098689')).toBe('(31)9609-8689');
-  });
+import { CeiPipe } from '../src/cei.pipe';
 
-  it('transforms "31996098689" to "(31)99609-8689"', () => {
-    expect(pipe.transform('31996098689')).toBe('(31)99609-8689');
+describe('CeiPipe', () => {
+  
+  let pipe = new CeiPipe();
+  it('transforms "761198762985" to "76.119.87629/85"', () => {
+    expect(pipe.transform('761198762985')).toBe('76.119.87629/85');
   });
 
   it('transforms null to null', () => {

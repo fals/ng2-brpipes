@@ -1,3 +1,4 @@
+import { CeiPipe } from './cei.pipe';
 import { TelefonePipe } from './telefone.pipe';
 import { CpfPipe } from './cpf.pipe';
 import { CnpjPipe } from './cnpj.pipe';
@@ -10,13 +11,15 @@ import { NgModule } from '@angular/core';
         CepPipe,
         CnpjPipe,
         CpfPipe,
-        TelefonePipe
+        TelefonePipe,
+        CeiPipe
     ],
     exports: [
         CepPipe,
         CnpjPipe,
         CpfPipe,
-        TelefonePipe
+        TelefonePipe,
+        CeiPipe
     ]
 })
 export class Ng2BRPipesModule { }

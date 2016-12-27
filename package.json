@@ -19,7 +19,7 @@
   "author": "Filipe Augusto Lima de Souza",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fknop/angular-pipes.git"
+    "url": "https://github.com/fals/ng2-brpipes"
   },
   "keywords": [
     "ng2",
