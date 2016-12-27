@@ -1,7 +1,7 @@
 # ng2-brpipes
 Angular2 pipes for BR types.
 
-## # How to install
+## How to install
 
 `npm install ng2-brpipes --save`
 
