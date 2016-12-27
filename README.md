@@ -18,7 +18,7 @@ import {Ng2BRPipesModule} from 'ng2-brpipes';
 export class MyModule { }
 ```
 
-# Avaible Pipes
+# Available pipes
 
 ### CpfPipe
 
