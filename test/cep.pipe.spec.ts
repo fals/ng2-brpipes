@@ -19,6 +19,6 @@ describe('CnpjPipe', () => {
   });
 
   it('transforms "33154" to "33154"', () => {
-    expect(pipe.transform('')).toBe('');
+    expect(pipe.transform('33154')).toBe('33154');
   });
 });
