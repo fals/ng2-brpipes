@@ -14,6 +14,7 @@ import {Ng2BRPipesModule} from 'ng2-brpipes';
 
 @NgModule({
   imports: [Ng2BRPipesModule]
+  exports: [Ng2BRPipesModule]
 })
 export class MyModule { }
 ```
