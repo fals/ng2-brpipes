@@ -1,20 +1,23 @@
 {
   "name": "ng2-brpipes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular2 pipes for BR types",
   "files": [
-    "src",
+    "src/*.d.ts",
+    "src/*.js",
     "!src/**/*.ngsummary.json",
     "index.d.ts",
     "tsconfig.json"
   ],
   "main": "src/index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "prepublish": "node_modules/.bin/gulp clean && npm run ngc",
     "tsc": "node_modules/.bin/tsc -p .",
     "karma": "node_modules/.bin/karma start karma.conf.js",
-    "test": "npm run ngc && npm run karma",
-    "ngc": "node_modules/.bin/ngc -p tsconfig.json"
+    "test": "node_modules/.bin/gulp clean && npm run ngc:test && npm run karma",
+    "ngc": "node_modules/.bin/ngc -p tsconfig.json",
+    "ngc:test": "node_modules/.bin/ngc -p tsconfig.test.json"
   },
   "author": "Filipe Augusto Lima de Souza",
   "repository": {
@@ -37,12 +40,12 @@
     "@angular/compiler-cli": "~2.1.1",
     "@angular/core": "~2.1.1",
     "@angular/platform-server": "~2.1.1",
-    "@types/core-js": "^0.9.34",
-    "@types/jasmine": "^2.5.37",
+    "@types/core-js": "0.9.34",
+    "@types/jasmine": "2.5.37",
     "core-js": "^2.4.1",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-clang-format": "^1.0.23",
-    "gulp-clean": "^0.3.2",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^2.0.0",
@@ -54,7 +57,7 @@
     "symbol-observable": "^0.2.4",
     "typescript": "2.0.8",
     "webpack": "^1.13.3",
-    "zone.js": "^0.7.2"
+    "zone.js": "0.7.2"
   },
   "dependencies": {}
 }

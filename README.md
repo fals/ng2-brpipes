@@ -3,7 +3,15 @@ Angular2 pipes for BR types.
 
 ## How to install
 
-`npm install ng2-brpipes --save`
+```bash
+npm install ng2-brpipes --save
+```
+
+>Or use **[yarn](https://yarnpkg.com)** to prevent broken updated dependencies
+
+```bash
+yarn add ng2-brpipes
+```
 
 ## How to Import the Module
 
@@ -14,6 +22,7 @@ import {Ng2BRPipesModule} from 'ng2-brpipes';
 
 @NgModule({
   imports: [Ng2BRPipesModule]
+  exports: [Ng2BRPipesModule]
 })
 export class MyModule { }
 ```

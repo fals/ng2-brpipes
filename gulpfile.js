@@ -1,7 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const clean = require('gulp-clean');
+const del = require('del');
 const format = require('gulp-clang-format');
 
 const srcsToFmt = ['path/**/*.ts'];
@@ -19,7 +19,7 @@ gulp.task('format', function() {
 
 gulp.task('clean', function () {
    
-   return gulp.src([
+   return del([
      'src/**/*.ngfactory.ts',
      'src/**/*.js',
      'src/**/*.d.ts',
@@ -29,6 +29,6 @@ gulp.task('clean', function () {
      'test/**/*.js',
      'test/**/*.map',
      'test/**/*.d.ts'
-   ]).pipe(clean()); 
+   ]); 
 });
 
