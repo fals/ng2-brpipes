@@ -5,6 +5,7 @@
   "files": [
     "src/*.d.ts",
     "src/*.js",
+    "src/*.metadata.json",
     "!src/**/*.ngsummary.json",
     "index.d.ts",
     "tsconfig.json"
