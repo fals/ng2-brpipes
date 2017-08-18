@@ -1,3 +1,4 @@
+import { RealPipe } from './real.pipe';
 import { CeiPipe } from './cei.pipe';
 import { TelefonePipe } from './telefone.pipe';
 import { CpfPipe } from './cpf.pipe';
@@ -12,14 +13,16 @@ import { NgModule } from '@angular/core';
         CnpjPipe,
         CpfPipe,
         TelefonePipe,
-        CeiPipe
+        CeiPipe,
+        RealPipe
     ],
     exports: [
         CepPipe,
         CnpjPipe,
         CpfPipe,
         TelefonePipe,
-        CeiPipe
+        CeiPipe,
+        RealPipe
     ]
 })
 export class Ng2BRPipesModule { }

@@ -29,6 +29,14 @@ export class MyModule { }
 
 # Available pipes
 
+### RealPipe (NEW)
+
+Transform number to Real currency like format.
+
+```html
+{{'9999.99' | real}} // output R$9.999,99
+```
+
 ### CpfPipe
 
 Transform string in CPF like format.
