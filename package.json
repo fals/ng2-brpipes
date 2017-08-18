@@ -1,6 +1,6 @@
 {
     "name": "ng2-brpipes",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Angular2 pipes for BR types",
     "files": [
         "src/*.d.ts",
