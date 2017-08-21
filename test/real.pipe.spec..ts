@@ -4,6 +4,18 @@ describe('RealPipe', () => {
 
   let pipe = new RealPipe();
 
+  it('transforms null to ""', () => {
+    expect(pipe.transform(null)).toBe('');
+  });
+
+  it('transforms undefined to ""', () => {
+    expect(pipe.transform(undefined)).toBe('');
+  });
+
+  it('transforms "" to ""', () => {
+    expect(pipe.transform("")).toBe('');
+  });
+
   it('transforms "999999.00" to "R$999.999,00"', () => {
     expect(pipe.transform(999999.00)).toBe('R$999.999,00');
   });

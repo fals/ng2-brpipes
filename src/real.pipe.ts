@@ -11,6 +11,10 @@ export class RealPipe implements PipeTransform {
         chunkDelimiter: string = '.',
         chunkLength: number = 3): any {
 
+        if(value === null ||  value === undefined || value === '') {
+            return '';
+        }
+
         if (isNaN(value)) {
             return value;
         }
