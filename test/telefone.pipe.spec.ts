@@ -25,4 +25,12 @@ describe('TelefonePipe', () => {
   it('transforms "33154" to "33154"', () => {
     expect(pipe.transform('33154')).toBe('33154');
   });
+
+  it('transforms "          " to ""', () => {
+    expect(pipe.transform('          ')).toBe('');
+  });
+
+  it('transforms "           " to ""', () => {
+    expect(pipe.transform('          ')).toBe('');
+  });
 });
