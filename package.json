@@ -1,6 +1,6 @@
 {
     "name": "ng2-brpipes",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "description": "Angular2 pipes for BR types",
     "files": [
         "src/*.d.ts",
@@ -60,5 +60,7 @@
         "webpack": "^1.13.3",
         "zone.js": "0.7.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "npm": "^5.7.1"
+    }
 }
