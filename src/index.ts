@@ -1,28 +1,7 @@
-import { RealPipe } from './real.pipe';
-import { CeiPipe } from './cei.pipe';
-import { TelefonePipe } from './telefone.pipe';
-import { CpfPipe } from './cpf.pipe';
-import { CnpjPipe } from './cnpj.pipe';
-import { CepPipe } from './cep.pipe';
-import { NgModule } from '@angular/core';
-
-
-@NgModule({
-    declarations: [
-        CepPipe,
-        CnpjPipe,
-        CpfPipe,
-        TelefonePipe,
-        CeiPipe,
-        RealPipe
-    ],
-    exports: [
-        CepPipe,
-        CnpjPipe,
-        CpfPipe,
-        TelefonePipe,
-        CeiPipe,
-        RealPipe
-    ]
-})
-export class Ng2BRPipesModule { }
+export * from './real.pipe';
+export * from './cei.pipe';
+export * from './telefone.pipe';
+export * from './cpf.pipe';
+export * from './cnpj.pipe';
+export * from './cep.pipe';
+export * from './br-pipes.module';
