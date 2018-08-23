@@ -1,4 +1,4 @@
-import { isString, formatCpf } from './utils';
+import { isString, formatCpf, removeNonDigits } from './utils';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -10,9 +10,10 @@ export class CpfPipe implements PipeTransform {
         if (!isString(value)) {
             return value;
         }
+        const onlyDigits = removeNonDigits(value);
 
-        if(value && value.length === 11) {
-            return formatCpf(value);
+        if(onlyDigits && onlyDigits.length === 11) {
+            return formatCpf(onlyDigits);
         }
 
         return value;

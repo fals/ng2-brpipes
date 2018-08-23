@@ -1,4 +1,4 @@
-import { isString, formatCnpj } from './utils';
+import { isString, formatCnpj, removeNonDigits } from './utils';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -11,8 +11,10 @@ export class CnpjPipe implements PipeTransform {
             return value;
         }
 
-        if(value && value.length === 14) {
-            return formatCnpj(value);
+        const onlyDigits = removeNonDigits(value);
+
+        if(onlyDigits && onlyDigits.length === 14) {
+            return formatCnpj(onlyDigits);
         }
 
         return value;
