@@ -51,6 +51,14 @@ Transform string in CNPJ like format.
 ```html
 {{'99999999999999' | cnpj}} // output 99.999.999/9999-99
 ```
+### CpfCnpjPipe
+
+Transform string in CPF/CNPJ like format.
+
+```html
+{{'01964256119' | cpf}} // output 019.642.561-19
+{{'99999999999999' | cnpj}} // output 99.999.999/9999-99
+```
 
 ### CepPipe
 
