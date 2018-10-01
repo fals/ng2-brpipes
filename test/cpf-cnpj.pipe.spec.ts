@@ -1,6 +1,6 @@
 import { CpfCnpjPipe } from './../src/cpf-cnpj.pipe';
 
-describe('CpfPipe', () => {
+describe('CpfCnpjPipe', () => {
   
   let pipe = new CpfCnpjPipe();
   it('transforms "01964256119" to "019.642.561-19"', () => {
