@@ -1,3 +1,4 @@
+import { CpfCnpjPipe } from './cpf-cnpj.pipe';
 import { RealPipe } from './real.pipe';
 import { CeiPipe } from './cei.pipe';
 import { TelefonePipe } from './telefone.pipe';
@@ -11,6 +12,7 @@ import { NgModule } from '@angular/core';
         CepPipe,
         CnpjPipe,
         CpfPipe,
+        CpfCnpjPipe,
         TelefonePipe,
         CeiPipe,
         RealPipe
@@ -19,6 +21,7 @@ import { NgModule } from '@angular/core';
         CepPipe,
         CnpjPipe,
         CpfPipe,
+        CpfCnpjPipe,
         TelefonePipe,
         CeiPipe,
         RealPipe
