@@ -2,24 +2,25 @@ version: 2
 jobs:
    build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
+    
     working_directory: ~/src
 
     steps:
       - checkout
       - run: npm install
       - run: npm test
-  # publish:
-  #   docker:
-  #     - image: circleci/node:7.10
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         name: Publish to NPM
-  #         command: | 
-  #           npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-  #           npm publish
+  
+    publish:
+      docker:
+        - image: circleci/node:7.10
+      steps:
+        - checkout
+        - run:
+            name: Publish to NPM
+            command: | 
+              npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+              npm publish
 
 workflows:
   version: 2
