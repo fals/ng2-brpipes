@@ -1,7 +1,9 @@
 # ng2-brpipes
-Angular2 pipes for BR types.
+Angular pipes for BR types.
 
-## How to install
+[![CircleCI](https://circleci.com/gh/fals/ng2-brpipes.svg?style=svg)](https://circleci.com/gh/fals/ng2-brpipes)
+
+## :floppy_disk: How to install
 
 ```bash
 npm install ng2-brpipes --save
@@ -13,7 +15,7 @@ npm install ng2-brpipes --save
 yarn add ng2-brpipes
 ```
 
-## How to Import the Module
+## :computer: How to Import the Module
 
 There's only a main module, just import it globaly or wherever you want to use it:
 
@@ -27,7 +29,7 @@ import {Ng2BRPipesModule} from 'ng2-brpipes';
 export class MyModule { }
 ```
 
-# Available pipes
+# :clipboard: Available pipes
 
 ### RealPipe (NEW)
 
