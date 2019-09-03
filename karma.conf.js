@@ -22,12 +22,12 @@ module.exports = function (config) {
         },
 
         frameworks: ['jasmine'],
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         plugins: [
             'karma-webpack',
             'karma-jasmine',
             'karma-spec-reporter',
-            'karma-chrome-launcher'
+            'karma-phantomjs-launcher'
         ],
         
         reporters: ['spec'],

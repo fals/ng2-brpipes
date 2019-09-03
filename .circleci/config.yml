@@ -1,0 +1,41 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    
+    working_directory: ~/src
+
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
+
+  publish:
+    docker:
+      - image: circleci/node:7.10
+
+    working_directory: ~/src
+
+    steps:
+      - checkout
+      - run:
+            name: Publish to NPM
+            command: | 
+              npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+              npm publish
+
+workflows:
+  version: 2
+  tagged-build:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /v[0-9]+\.[0-9]+\.[0-9]+/
+            branches:
+              only: master
+              ignore: /.*/
