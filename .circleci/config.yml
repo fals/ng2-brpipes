@@ -22,6 +22,7 @@ jobs:
       - run:
             name: Publish to NPM
             command: | 
+              npm install
               npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
               npm publish
 
