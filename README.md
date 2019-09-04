@@ -3,6 +3,10 @@ Angular pipes for BR types.
 
 [![CircleCI](https://circleci.com/gh/fals/ng2-brpipes.svg?style=svg)](https://circleci.com/gh/fals/ng2-brpipes)
 
+## :rotating_light: Breaking changes
+
+The package was updated to Angular v8. The new npm version will start now with `v8.0.0` and progress fallowing the framework. If you are using it in legacy do not update to this version, use the legacy `v1.2.0`.
+
 ## :floppy_disk: How to install
 
 ```bash

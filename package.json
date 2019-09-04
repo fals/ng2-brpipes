@@ -1,6 +1,6 @@
 {
     "name": "ng2-brpipes",
-    "version": "1.2.0",
+    "version": "8.0.0",
     "description": "Angular2 pipes for BR types",
     "files": [
         "src/*.d.ts",
@@ -49,7 +49,7 @@
         "gulp-clang-format": "1.0.27",
         "jasmine-core": "3.4.0",
         "karma": "4.1.0",
-        "karma-chrome-launcher": "2.2.0",
+        "karma-phantomjs-launcher": "^1.0.4",
         "karma-jasmine": "2.0.1",
         "karma-spec-reporter": "0.0.32",
         "karma-webpack": "4.0.2",
@@ -61,6 +61,6 @@
         "zone.js": "0.9.1"
     },
     "dependencies": {
-        "npm": "6.9.0"
+        "npm": "^6.11.3"
     }
 }
