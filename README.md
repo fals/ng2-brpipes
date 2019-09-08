@@ -92,6 +92,3 @@ Transform string in Telefone like format. Supports 8 and 9 digits phone numbers
 {{'31996098689' | telefone}} // output (31)99609-8689
 ```
 
-
-
-
