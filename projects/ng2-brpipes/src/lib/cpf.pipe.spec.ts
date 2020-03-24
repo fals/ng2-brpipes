@@ -1,10 +1,14 @@
-import { CeiPipe } from '../src/cei.pipe';
+import { CpfPipe } from './/cpf.pipe';
 
-describe('CeiPipe', () => {
-  
-  let pipe = new CeiPipe();
-  it('transforms "761198762985" to "76.119.87629/85"', () => {
-    expect(pipe.transform('761198762985')).toBe('76.119.87629/85');
+describe('CpfPipe', () => {
+
+  const pipe = new CpfPipe();
+  it('transforms "01964256119" to "019.642.561-19"', () => {
+    expect(pipe.transform('01964256119')).toBe('019.642.561-19');
+  });
+
+  it('transforms "019.642.561-19" to "019.642.561-19"', () => {
+    expect(pipe.transform('019.642.561-19')).toBe('019.642.561-19');
   });
 
   it('transforms null to null', () => {
@@ -22,4 +26,5 @@ describe('CeiPipe', () => {
   it('transforms "33154" to "33154"', () => {
     expect(pipe.transform('33154')).toBe('33154');
   });
+
 });

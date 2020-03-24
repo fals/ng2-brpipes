@@ -1,8 +1,8 @@
-import { CpfCnpjPipe } from './../src/cpf-cnpj.pipe';
+import { CpfCnpjPipe } from '././/cpf-cnpj.pipe';
 
 describe('CpfCnpjPipe', () => {
-  
-  let pipe = new CpfCnpjPipe();
+
+  const pipe = new CpfCnpjPipe();
   it('transforms "01964256119" to "019.642.561-19"', () => {
     expect(pipe.transform('01964256119')).toBe('019.642.561-19');
   });
@@ -10,7 +10,7 @@ describe('CpfCnpjPipe', () => {
   it('transforms "019.642.561-19" to "019.642.561-19"', () => {
     expect(pipe.transform('019.642.561-19')).toBe('019.642.561-19');
   });
-  
+
   it('transforms null to null', () => {
     expect(pipe.transform(null)).toBe(null);
   });
