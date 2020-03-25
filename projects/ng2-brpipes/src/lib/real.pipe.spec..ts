@@ -1,8 +1,8 @@
-import { RealPipe } from '../src/real.pipe';
+import { RealPipe } from './/real.pipe';
 
 describe('RealPipe', () => {
 
-  let pipe = new RealPipe();
+  const pipe = new RealPipe();
 
   it('transforms null to ""', () => {
     expect(pipe.transform(null)).toBe('');
@@ -13,7 +13,7 @@ describe('RealPipe', () => {
   });
 
   it('transforms "" to ""', () => {
-    expect(pipe.transform("")).toBe('');
+    expect(pipe.transform('')).toBe('');
   });
 
   it('transforms "999999.00" to "R$999.999,00"', () => {

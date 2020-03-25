@@ -1,24 +1,29 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": true,
-        "noUnusedLocals": true,
-        "suppressImplicitAnyIndexErrors": false,
-        "declaration": true,
-        "types": [
-            "core-js",
-            "jasmine"
-        ]
-    },
-    "exclude": [
-        "node_modules",
-        "index.d.ts",
-        "test"
-    ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ng2-brpipes": [
+        "dist/ng2-brpipes/ng2-brpipes",
+        "dist/ng2-brpipes"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

@@ -2,9 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:jessie-browsers
-    
-    working_directory: ~/src
+      - image: circleci/node:lts-jessie-browsers
 
     steps:
       - checkout
@@ -13,17 +11,17 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/node:7.10
-
-    working_directory: ~/src
+      - image: circleci/node:lts
 
     steps:
       - checkout
       - run:
             name: Publish to NPM
-            command: | 
+            command: |
               npm install
               npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+              npm run build -- --prod
+              cd dist/ng2-brpipes
               npm publish
 
 workflows:
